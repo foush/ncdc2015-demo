@@ -1,0 +1,6 @@
+[
+  {"name": "Groceries", "tasks": [{"name": "Bananas", "complete": false}, {"name": "Eggs", "complete": true}, {"name": "Bread", "complete": false}, {"name": "Broccoli", "complete": true}]},
+  {"name": "House Chores", "tasks": [{"name": "Sweep", "complete": true}, {"name": "Dishes", "complete": true}, {"name": "Take out Garbage", "complete": true}, {"name": "Bathroom Duty", "complete": true}, {"name": "Empty Litter Box", "complete": true}]},
+  {"name": "Work", "tasks": [{"name": "File TPS Reports", "complete": false}, {"name": "Come in on Saturday", "complete": false}, {"name": "Destroy Printer", "complete": true}, {"name": "Meet with the Bobs", "complete": true}]},
+  {"name": "Monthly Bills", "tasks": [{"name": "Pay Electric", "complete": true}, {"name": "Pay Cable", "complete": false}, {"name": "Pay Water", "complete": true}, {"name": "Pay Gas", "complete": true}]}
+]

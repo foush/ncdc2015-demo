@@ -1,0 +1,34 @@
+<link rel="import" href="../../bower_components/polymer/polymer.html">  
+<link rel="import" href="../input-heading/input-heading-2.html">
+<link rel="import" href="../../bower_components/paper-item/paper-icon-item.html">
+<link rel="import" href="../../bower_components/paper-checkbox/paper-checkbox.html">
+<link rel="import" href="../../bower_components/paper-input/paper-input.html">
+  <dom-module id="todo-list"> 
+    <template> 
+        <input-heading label="{{list.name}}"></input-heading>
+        <template is="dom-repeat" items="{{list.tasks}}" as="task">
+            <paper-icon-item>
+                <paper-checkbox item-icon checked="{{task.complete}}"></paper-checkbox>
+                <div class="flex">{{task.name}}</div>
+            </paper-icon-item>
+        </template>
+        <paper-input label="New Task" value="{{newTask}}" on-keyup="_handleInput"></paper-input>
+    </template>
+     </dom-module> 
+<script>
+    Polymer({
+        is: "todo-list",
+        properties: {
+            list: {
+                type: Object,
+                notify: true
+            }
+        },
+        _handleInput: function(ev) {
+            if (ev.keyCode == 13) {
+                this.push('list.tasks', {name: this.newTask, complete: false});
+                this.set('newTask', '');
+            }
+        }
+    }) ;
+</script>
